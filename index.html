@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
     <title>To Do List</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    
 </head>
-<body>
-    <div class="container">
-        <p>My Tasks:</p>
-        <div class="addedList"></div>
-        <div class="inputs">
-            <input type="text" class="tasks">
-            <button class="add">Add</button>
-            <button class="delete">Delete All</button>
+<body class="container">
+    <div class="container justify-content-column">
+        <h1 class="text-warning">My Tasks:</h1>
+        <div style="height: 80vh;">
+            <table class=" table table-hover table-primary border-info" >
+                <tbody class="tbody col-12 "></tbody>
+            </table>
+        </div>
+        <div class="inputs col-md-12 col-sm-6 d-flex mr-2" >
+            <input type="text" class="tasks form-control input-group col" placeholder="New Task">
+            <button class="add btn btn-warning col-md-1 col-sm-1">Add</button>
+            <button class="delete btn btn-danger col-md-1 col-sm-1">Delete All</button>
         </div>
     </div>
     <script src="./main.js"></script>

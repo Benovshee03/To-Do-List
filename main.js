@@ -1,14 +1,19 @@
-let newList=document.querySelector(".addedList")
+let newList=document.querySelector(".table")
 let inputText = document.querySelector(".tasks")
 let deleteX = document.querySelector(".delete")
+let tbody = document.querySelector('.tbody')
 document.querySelector(".add").addEventListener("click",function(){
 if(inputText.value.length===0){
     alert("Add a task!!!")
 }else{
-    let newTasks=document.createElement("div");
-    newTasks.innerHTML=`${inputText.value} <span class="deleteitem" onclick="this.parentElement.remove()">x</span>`
-    newList.appendChild(newTasks)
+    let newRow = document.createElement("tr")
+    let newTasks=document.createElement("td");
+    newTasks.setAttribute("class","d-flex justify-content-between")
+    // newRow.setAttribute("class","d-flex")
+    newTasks.innerHTML=`<span lass="col-8">${inputText.value} </span><span class="deleteitem text-danger " onclick="this.parentElement.remove()">X</span>`
     inputText.value=''
+    newRow.appendChild(newTasks)
+    tbody.appendChild(newRow)
 }
 })
 deleteX.addEventListener("click",function(){
